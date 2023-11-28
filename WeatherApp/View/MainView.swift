@@ -27,10 +27,9 @@ class MainView : UIView {
         return view
     }()
     
-    private let temperatureView: UIView = {
-        let view = UIView()
+    private let middleView: UIView = {
+        let view = TemperatureView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = UIColor.orange
         return view
     }()
     
@@ -58,7 +57,7 @@ class MainView : UIView {
         
         // Add components to the stack view
         stackView.addArrangedSubview(searchView)
-        stackView.addArrangedSubview(temperatureView)
+        stackView.addArrangedSubview(middleView)
         stackView.addArrangedSubview(currentLocationView)
         
         // Add the stack view to the main view
@@ -78,9 +77,9 @@ class MainView : UIView {
             searchView.heightAnchor.constraint(equalToConstant: 50)
         ]
         
-        let temperatureViewConstraints = [
-            temperatureView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-            temperatureView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
+        let middleViewConstraints = [
+            middleView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            middleView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
         ]
         
         let locationViewConstraints = [
@@ -88,18 +87,12 @@ class MainView : UIView {
             currentLocationView.heightAnchor.constraint(equalToConstant: 50)
         ]
         
-        //        let tempInfoViewConstraints = [
-        //            tempInfoView.centerXAnchor.constraint(equalTo: centerXAnchor),
-        //            tempInfoView.centerYAnchor.constraint(equalTo: centerYAnchor)
-        //        ]
         
         // Enable Auto Layout
         NSLayoutConstraint.activate(mainStackConstraints)
         NSLayoutConstraint.activate(searchViewConstraints)
-        NSLayoutConstraint.activate(temperatureViewConstraints)
+        NSLayoutConstraint.activate(middleViewConstraints)
         NSLayoutConstraint.activate(locationViewConstraints)
-        //NSLayoutConstraint.activate(imageConstraints)
-        //NSLayoutConstraint.activate(tempInfoViewConstrain
         
     }
 }
