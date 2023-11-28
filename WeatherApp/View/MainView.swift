@@ -16,7 +16,7 @@ class MainView : UIView {
         stackView.axis = .vertical
         stackView.distribution = .fill
         stackView.alignment = .center
-        stackView.spacing = 30
+        stackView.spacing = 25
         return stackView
     }()
     
@@ -34,8 +34,7 @@ class MainView : UIView {
     }()
     
     private let currentLocationView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.purple
+        let view = myLocationView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -83,7 +82,7 @@ class MainView : UIView {
         ]
         
         let locationViewConstraints = [
-            currentLocationView.widthAnchor.constraint(equalToConstant: 200),
+            //currentLocationView.widthAnchor.constraint(equalToConstant: 200),
             currentLocationView.heightAnchor.constraint(equalToConstant: 50)
         ]
         
