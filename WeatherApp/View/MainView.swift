@@ -21,8 +21,7 @@ class MainView : UIView {
     }()
     
     private let searchView: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor.systemPink
+        let view = SearchView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -34,7 +33,7 @@ class MainView : UIView {
     }()
     
     private let currentLocationView: UIView = {
-        let view = myLocationView()
+        let view = MyLocationView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()

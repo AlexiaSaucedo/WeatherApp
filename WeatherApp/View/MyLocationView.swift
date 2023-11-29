@@ -7,11 +7,11 @@
 
 import UIKit
 
-class myLocationView : UIView {
+class MyLocationView : UIView {
     
     //MARK: Components
     
-    lazy var currentLocationBtn: UIButton = {
+    private let currentLocationBtn: UIButton = {
         var config = UIButton.Configuration.filled()
         config.title = "Use Current Location"
         config.baseBackgroundColor = UIColor(named: "AccentColor")

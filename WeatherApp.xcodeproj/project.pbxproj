@@ -13,7 +13,8 @@
 		EA0599D02B052EF400C3B8B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0599CF2B052EF400C3B8B8 /* Assets.xcassets */; };
 		EA0599D32B052EF400C3B8B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0599D12B052EF400C3B8B8 /* LaunchScreen.storyboard */; };
 		EA0599DE2B0531C500C3B8B8 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0599DD2B0531C500C3B8B8 /* MainView.swift */; };
-		EA75A8BB2B157D6200A9D02F /* myLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA75A8BA2B157D6200A9D02F /* myLocationView.swift */; };
+		EA75A8BB2B157D6200A9D02F /* MyLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA75A8BA2B157D6200A9D02F /* MyLocationView.swift */; };
+		EA75A8BF2B158B8D00A9D02F /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA75A8BE2B158B8D00A9D02F /* SearchView.swift */; };
 		EACC6A012B15638D0080CE2A /* TemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC6A002B15638D0080CE2A /* TemperatureView.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,8 @@
 		EA0599D22B052EF400C3B8B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA0599D42B052EF400C3B8B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0599DD2B0531C500C3B8B8 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		EA75A8BA2B157D6200A9D02F /* myLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myLocationView.swift; sourceTree = "<group>"; };
+		EA75A8BA2B157D6200A9D02F /* MyLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocationView.swift; sourceTree = "<group>"; };
+		EA75A8BE2B158B8D00A9D02F /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		EACC6A002B15638D0080CE2A /* TemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,7 +79,8 @@
 			children = (
 				EA0599DD2B0531C500C3B8B8 /* MainView.swift */,
 				EACC6A002B15638D0080CE2A /* TemperatureView.swift */,
-				EA75A8BA2B157D6200A9D02F /* myLocationView.swift */,
+				EA75A8BA2B157D6200A9D02F /* MyLocationView.swift */,
+				EA75A8BE2B158B8D00A9D02F /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -168,8 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EACC6A012B15638D0080CE2A /* TemperatureView.swift in Sources */,
-				EA75A8BB2B157D6200A9D02F /* myLocationView.swift in Sources */,
+				EA75A8BB2B157D6200A9D02F /* MyLocationView.swift in Sources */,
 				EA0599CB2B052EF100C3B8B8 /* ViewController.swift in Sources */,
+				EA75A8BF2B158B8D00A9D02F /* SearchView.swift in Sources */,
 				EA0599DE2B0531C500C3B8B8 /* MainView.swift in Sources */,
 				EA0599C72B052EF100C3B8B8 /* AppDelegate.swift in Sources */,
 				EA0599C92B052EF100C3B8B8 /* SceneDelegate.swift in Sources */,

@@ -11,7 +11,7 @@ class TemperatureView : UIView {
     
 // MARK: Components
     
-    lazy var stackView: UIStackView = {
+    private let stackView: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
@@ -19,7 +19,7 @@ class TemperatureView : UIView {
         return stack
     }()
     
-    lazy var tempImg: UIImageView = {
+    private let tempImg: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "sun.max.fill")
@@ -28,7 +28,7 @@ class TemperatureView : UIView {
         return imageView
     }()
     
-    lazy var cityLabel: UILabel = {
+    private let cityLabel: UILabel = {
         let label = UILabel()
         label.text = "Madrid, Spain"
         label.textColor = UIColor.white
@@ -37,7 +37,7 @@ class TemperatureView : UIView {
         return label
     }()
     
-    lazy var tempLabel: UILabel = {
+    private let tempLabel: UILabel = {
         let label = UILabel()
         label.text = "21 ºC"
         label.textColor = UIColor.white
