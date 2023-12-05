@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchView : UIView {
+class SearchView : UIView{
     
     private let stackView: UIStackView = {
         let stack = UIStackView()
@@ -19,7 +19,7 @@ class SearchView : UIView {
         return stack
     }()
     
-    private let searchTextField : UITextField = {
+    var searchTextField : UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = "Search"

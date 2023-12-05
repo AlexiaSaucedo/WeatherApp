@@ -20,11 +20,15 @@ class MainView : UIView {
         return stackView
     }()
     
-    private let searchView: UIView = {
+    private let searchView: SearchView = {
         let view = SearchView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    func getSearchTextField() -> UITextField {
+        return searchView.searchTextField
+    }
     
     private let middleView: UIView = {
         let view = TemperatureView()
