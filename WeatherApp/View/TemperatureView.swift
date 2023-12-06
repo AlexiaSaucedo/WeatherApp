@@ -28,7 +28,7 @@ class TemperatureView : UIView {
         return imageView
     }()
     
-    private let cityLabel: UILabel = {
+    var cityLabel: UILabel = {
         let label = UILabel()
         label.text = "Madrid, Spain"
         label.textColor = UIColor.white
@@ -37,7 +37,7 @@ class TemperatureView : UIView {
         return label
     }()
     
-    private let tempLabel: UILabel = {
+    var tempLabel: UILabel = {
         let label = UILabel()
         label.text = "21 ºC"
         label.textColor = UIColor.white

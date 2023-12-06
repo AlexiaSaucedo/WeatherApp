@@ -10,8 +10,10 @@ import UIKit
 class ViewController: UIViewController {
     
     var mainView = MainView()
-    //var weatherManager = WeatherManager()
+    var weatherManager = WeatherManager()
     
+    var temperatureLabel: UILabel!
+    var cityLabel: UILabel!
     var searchTextField: UITextField!
     
     override func loadView() {
@@ -21,11 +23,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        temperatureLabel = mainView.getTemperatureLabel()
+        cityLabel = mainView.getCityLabel()
         searchTextField = mainView.getSearchTextField()
-        //print(searchTextField.text ?? "NULL VALUE")
+        
         searchTextField.delegate = self
-        //weatherManager.delegate = self
-    
+        weatherManager.delegate = self
     }
 
 
@@ -51,10 +54,23 @@ extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if let city = searchTextField.text {
             print(city)
-            //weatherManager.fetchWeather(cityName: city)
+            weatherManager.fetchWeather(cityName: city)
         }
         searchTextField.text = ""
     }
    
+}
+
+extension ViewController : WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString + " ºC"
+            self.cityLabel.text = weather.cityName + ", " + weather.cityCountry
+        }
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
+    }
 }
 

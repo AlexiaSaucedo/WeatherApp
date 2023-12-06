@@ -33,6 +33,7 @@ struct WeatherManager {
                 
                 if let safeData = data {
                     if let weather = self.parseJSON(safeData){
+                        print(weather)
                         self.delegate?.didUpdateWeather(self, weather: weather)
                     }
                 }
@@ -49,8 +50,9 @@ struct WeatherManager {
             let temp = decodedData.current.temperature
             let id = decodedData.current.weather_code
             let name = decodedData.location.name
+            let country = decodedData.location.country
             
-            let weather = WeatherModel(conditionId: id, cityName: name, temperature: temp)
+            let weather = WeatherModel(conditionId: id, cityName: name, cityCountry: country, temperature: temp)
             return weather
         } catch {
             delegate?.didFailWithError(error: error)

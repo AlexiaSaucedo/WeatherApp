@@ -30,11 +30,19 @@ class MainView : UIView {
         return searchView.searchTextField
     }
     
-    private let middleView: UIView = {
+    private let temperatureView: TemperatureView = {
         let view = TemperatureView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
+    func getCityLabel() -> UILabel {
+        return temperatureView.cityLabel
+    }
+    
+    func getTemperatureLabel() -> UILabel {
+        return temperatureView.tempLabel
+    }
     
     private let currentLocationView: UIView = {
         let view = MyLocationView()
@@ -59,7 +67,7 @@ class MainView : UIView {
         
         // Add components to the stack view
         stackView.addArrangedSubview(searchView)
-        stackView.addArrangedSubview(middleView)
+        stackView.addArrangedSubview(temperatureView)
         stackView.addArrangedSubview(currentLocationView)
         
         // Add the stack view to the main view
@@ -80,8 +88,8 @@ class MainView : UIView {
         ]
         
         let middleViewConstraints = [
-            middleView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
-            middleView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
+            temperatureView.leadingAnchor.constraint(equalTo: stackView.leadingAnchor),
+            temperatureView.trailingAnchor.constraint(equalTo: stackView.trailingAnchor)
         ]
         
         let locationViewConstraints = [

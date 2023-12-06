@@ -26,6 +26,7 @@ class SearchView : UIView{
         textField.attributedPlaceholder = NSAttributedString(string: "Search", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
         textField.borderStyle = .roundedRect
         textField.backgroundColor = UIColor(named: "secondarySunny")
+        textField.textColor = UIColor.gray
         return textField
     }()
     
