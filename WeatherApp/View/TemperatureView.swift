@@ -19,7 +19,7 @@ class TemperatureView : UIView {
         return stack
     }()
     
-    private let tempImg: UIImageView = {
+    var tempImg: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = UIImage(systemName: "sun.max.fill")
@@ -30,10 +30,12 @@ class TemperatureView : UIView {
     
     var cityLabel: UILabel = {
         let label = UILabel()
-        label.text = "Madrid, Spain"
+        label.text = "Hawaiian Gardens, United States of America"
         label.textColor = UIColor.white
         label.font = UIFont.systemFont(ofSize: 30.0, weight: .medium)
         label.textAlignment = .center
+        label.numberOfLines = 2
+        label.lineBreakMode = .byWordWrapping
         return label
     }()
     
@@ -81,6 +83,8 @@ class TemperatureView : UIView {
         self.addSubview(stackView)
         
         let stackConstraints = [
+            stackView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ]

@@ -36,6 +36,10 @@ class MainView : UIView {
         return view
     }()
     
+    func getImageView() -> UIImageView {
+        return temperatureView.tempImg
+    }
+    
     func getCityLabel() -> UILabel {
         return temperatureView.cityLabel
     }

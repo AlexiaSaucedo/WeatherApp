@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     var mainView = MainView()
     var weatherManager = WeatherManager()
     
+    var conditionImageView: UIImageView!
     var temperatureLabel: UILabel!
     var cityLabel: UILabel!
     var searchTextField: UITextField!
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        conditionImageView = mainView.getImageView()
         temperatureLabel = mainView.getTemperatureLabel()
         cityLabel = mainView.getCityLabel()
         searchTextField = mainView.getSearchTextField()
@@ -64,6 +66,7 @@ extension ViewController: UITextFieldDelegate {
 extension ViewController : WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
         DispatchQueue.main.async {
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.temperatureLabel.text = weather.temperatureString + " ºC"
             self.cityLabel.text = weather.cityName + ", " + weather.cityCountry
         }

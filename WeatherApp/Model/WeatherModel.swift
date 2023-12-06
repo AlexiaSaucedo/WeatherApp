@@ -24,19 +24,19 @@ struct WeatherModel {
         let foggy = Set([248,260])
         
         if(conditionId == 113){
-            return "sun.max"
+            return "sun.max.fill"
         } else if (conditionId == 200) {
-            return "cloud.bolt"
+            return "cloud.bolt.rain.fill"
         } else if drizzle.contains(conditionId) {
-            return "cloud.drizzle"
+            return "cloud.drizzle.fill"
         } else if rain.contains(conditionId) {
-            return "cloud.rain"
+            return "cloud.rain.fill"
         } else if snowy.contains(conditionId) {
-            return "cloud.snow"
+            return "cloud.snow.fill"
         } else if foggy.contains(conditionId) {
-            return "cloud.fog"
+            return "cloud.fog.fill"
         } else {
-            return "cloud"
+            return "smoke.fill"
         }
     }
     
