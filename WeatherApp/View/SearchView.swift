@@ -30,16 +30,15 @@ class SearchView : UIView{
         return textField
     }()
     
-    private let searchButton : UIButton = {
+    var searchButton : UIButton = {
         var config = UIButton.Configuration.tinted()
-        config.baseBackgroundColor = UIColor(named: "AccentColor")
+        config.baseBackgroundColor = UIColor(named: "accentSunny")
         config.image = UIImage(systemName: "magnifyingglass")
         config.buttonSize = .large
         
         let button = UIButton(configuration: config, primaryAction: nil)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 25
-        button.setTitleColor(.white, for: .normal)
         return button
     }()
     

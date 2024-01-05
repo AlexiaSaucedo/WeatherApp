@@ -30,6 +30,10 @@ class MainView : UIView {
         return searchView.searchTextField
     }
     
+    func getSearchButton() -> UIButton {
+        return searchView.searchButton
+    }
+    
     private let temperatureView: TemperatureView = {
         let view = TemperatureView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -48,12 +52,15 @@ class MainView : UIView {
         return temperatureView.tempLabel
     }
     
-    private let currentLocationView: UIView = {
+    private let currentLocationView: MyLocationView = {
         let view = MyLocationView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 
+    func getLocationButton() -> UIButton {
+        return currentLocationView.currentLocationBtn
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)

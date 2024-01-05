@@ -11,10 +11,10 @@ class MyLocationView : UIView {
     
     //MARK: Components
     
-    private let currentLocationBtn: UIButton = {
+    var currentLocationBtn: UIButton = {
         var config = UIButton.Configuration.filled()
         config.title = "Use Current Location"
-        config.baseBackgroundColor = UIColor(named: "AccentColor")
+        config.baseBackgroundColor = UIColor(named: "accentSunny")
         config.cornerStyle = .capsule
         config.image = UIImage(systemName: "location.circle.fill")
         config.imagePadding = 10
