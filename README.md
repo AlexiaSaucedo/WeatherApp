@@ -16,8 +16,6 @@ to consolidate knowledge about making API calls and implementing the Model-View-
 ## Mockup Video
 https://github.com/AlexiaSaucedo/WeatherApp/assets/72261496/944780f3-fb6e-4afc-9143-1efdb380fd98
 
-https://github.com/AlexiaSaucedo/WeatherApp/assets/72261496/b43f78fe-47fa-4f44-ba84-0d326a298b42
-
 ## Build Process
 
 1. Created a mockup version of the app, designing the user interface and establishing a brand identity with a cohesive color palette.
